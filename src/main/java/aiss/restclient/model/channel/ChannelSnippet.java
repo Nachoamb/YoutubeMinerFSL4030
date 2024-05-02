@@ -46,26 +46,31 @@ public class ChannelSnippet {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(ChannelSnippet.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("title");
-        sb.append('=');
-        sb.append(((this.title == null)?"<null>":this.title));
-        sb.append(',');
-        sb.append("description");
-        sb.append('=');
-        sb.append(((this.description == null)?"<null>":this.description));
-        sb.append(',');
-        sb.append("publishedAt");
-        sb.append('=');
-        sb.append(((this.publishedAt == null)?"<null>":this.publishedAt));
-        sb.append(',');
-        if (sb.charAt((sb.length()- 1)) == ',') {
-            sb.setCharAt((sb.length()- 1), ']');
-        } else {
-            sb.append(']');
-        }
-        return sb.toString();
+        return "ChannelSnippet [title=" + title + ", description=" + description + ", publishedAt=" + publishedAt + "]";
     }
+
+    // @Override
+    // public String toString() {
+    //     StringBuilder sb = new StringBuilder();
+    //     sb.append(ChannelSnippet.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+    //     sb.append("title");
+    //     sb.append('=');
+    //     sb.append(((this.title == null)?"<null>":this.title));
+    //     sb.append(',');
+    //     sb.append("description");
+    //     sb.append('=');
+    //     sb.append(((this.description == null)?"<null>":this.description));
+    //     sb.append(',');
+    //     sb.append("publishedAt");
+    //     sb.append('=');
+    //     sb.append(((this.publishedAt == null)?"<null>":this.publishedAt));
+    //     sb.append(',');
+    //     if (sb.charAt((sb.length()- 1)) == ',') {
+    //         sb.setCharAt((sb.length()- 1), ']');
+    //     } else {
+    //         sb.append(']');
+    //     }
+    //     return sb.toString();
+    // }
 
 }

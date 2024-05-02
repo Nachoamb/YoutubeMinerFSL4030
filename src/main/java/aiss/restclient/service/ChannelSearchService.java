@@ -21,7 +21,7 @@ public class ChannelSearchService {
     public List<ChannelSearch> findAllChannels() {
         String uri = "https://www.googleapis.com/youtube/v3/channels?key=AIzaSyC0ypA5q3CD-YKibZHLxWK3PhVPgggvlqA&part=snippet&forHandle=GoogleDevelopers";
 
-        ChannelSearch[] channels = restTemplate.getForObject(uri, ChannelSearch[].class);
+        ChannelSearch channels = restTemplate.getForObject(uri, ChannelSearch.class);
         return Arrays.asList(channels);
     }
 
