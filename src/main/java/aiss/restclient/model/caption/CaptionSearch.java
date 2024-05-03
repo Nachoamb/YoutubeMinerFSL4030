@@ -23,8 +23,7 @@ public class CaptionSearch {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(CaptionSearch.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("items");
+        sb.append("\n       items");
         sb.append('=');
         sb.append(((this.items == null)?"<null>":this.items));
         sb.append(',');

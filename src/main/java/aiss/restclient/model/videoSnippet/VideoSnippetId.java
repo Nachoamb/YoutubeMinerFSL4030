@@ -23,12 +23,6 @@ public class VideoSnippetId {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(((this.videoId == null)?"<null>":this.videoId));
-        sb.append(',');
-        if (sb.charAt((sb.length()- 1)) == ',') {
-            sb.setCharAt((sb.length()- 1), ']');
-        } else {
-            sb.append(']');
-        }
         return sb.toString();
     }
 

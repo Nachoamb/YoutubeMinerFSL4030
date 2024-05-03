@@ -76,6 +76,13 @@ public class VideoSnippet {
         sb.append("\n       snippet");
         sb.append('=');
         sb.append(((this.snippet == null)?"<null>":this.snippet));
+        sb.append("\n       captions");
+        sb.append('=');
+        sb.append(((this.captions == null)?"<null>":this.captions));
+        sb.append("\n       comments");
+        sb.append('=');
+        sb.append(((this.comments == null)?"<null>":this.comments));
+
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
         } else {

@@ -19,7 +19,7 @@ class YoutubeServiceTest {
     @Test
     @DisplayName("Get channels with id")
     void getChannelsWithId() {
-        String token = "AIzaSyC0ypA5q3CD-YKibZHLxWK3PhVPgggvlqA";
+        String token = "AIzaSyBMFf0FXcHTGGud3hXJeFKD6bEksvPNcMw";
         String part = "snippet,contentDetails,statistics";
         String id = "UCnQC_XGCCI__qrxwgZS27-A";
         ChannelSearch channel = service.getChannelWithId(token,part,id);
@@ -56,7 +56,7 @@ class YoutubeServiceTest {
         String token = "AIzaSyC0ypA5q3CD-YKibZHLxWK3PhVPgggvlqA";
         String part = "snippet";
         String playListId = "UgzDE2tasfmrYLyNkGt4AaABAg";
-        CommentSearch comment = service.getComments(token,part,playListId);
+        CommentSearch comment = service.getComments(token,part,playListId,"3");
         assertNotNull(comment,"The comment is null");
         System.out.println(comment);
     }

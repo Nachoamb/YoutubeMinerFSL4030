@@ -23,8 +23,7 @@ public class AuthorChannelId {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(AuthorChannelId.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("value");
+        sb.append("\n                           value");
         sb.append('=');
         sb.append(((this.value == null)?"<null>":this.value));
         sb.append(',');

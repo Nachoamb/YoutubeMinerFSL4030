@@ -21,8 +21,7 @@ public class CommentSnippet {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(CommentSnippet.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("topLevelComment");
+        sb.append("\n                   topLevelComment");
         sb.append('=');
         sb.append(((this.topLevelComment == null)?"<null>":this.topLevelComment));
         sb.append(',');
