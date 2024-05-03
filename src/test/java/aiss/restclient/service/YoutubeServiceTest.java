@@ -31,10 +31,10 @@ class YoutubeServiceTest {
     @DisplayName("Get videos")
     void getVideos() {
         String token = "AIzaSyC0ypA5q3CD-YKibZHLxWK3PhVPgggvlqA";
-        String part = "snippet%2CcontentDetails";
-        String playListId = "UUnQC_XGCCI__qrxwgZS27-A";
+        String part = "snippet";
+        String channelId = "UCnQC_XGCCI__qrxwgZS27-A";
         String maxResults = "25";
-        VideoSnippetSearch video = service.getVideos(token,part,playListId,maxResults);
+        VideoSnippetSearch video = service.getVideos(token,part,channelId,maxResults);
         assertNotNull(video,"The video is null");
         System.out.println(video);
     }

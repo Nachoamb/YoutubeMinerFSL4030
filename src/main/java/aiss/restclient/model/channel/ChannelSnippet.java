@@ -47,16 +47,13 @@ public class ChannelSnippet {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(ChannelSnippet.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("title");
+        sb.append("\n           title");
         sb.append('=');
         sb.append(((this.title == null)?"<null>":this.title));
-        sb.append(',');
-        sb.append("description");
+        sb.append("\n           description");
         sb.append('=');
         sb.append(((this.description == null)?"<null>":this.description));
-        sb.append(',');
-        sb.append("publishedAt");
+        sb.append("\n           publishedAt");
         sb.append('=');
         sb.append(((this.publishedAt == null)?"<null>":this.publishedAt));
         sb.append(',');

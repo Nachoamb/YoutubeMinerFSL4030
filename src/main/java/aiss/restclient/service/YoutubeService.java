@@ -27,17 +27,15 @@ public class YoutubeService {
     }
     public ChannelSearch getChannelWithId(String token,String part, String id) {
         String uri = String.format("https://www.googleapis.com/youtube/v3/channels?key=%s&part=%s&id=%s",token,part,id);
-        /*
-        HttpEntity<Channel> entity = auth(token);
-        ResponseEntity<Channel> response = restTemplate.exchange(uri, HttpMethod.GET, entity, Channel.class);
-        return response.getBody();
-        */
         ResponseEntity<ChannelSearch> entity = restTemplate.getForEntity(uri, ChannelSearch.class);
-        return entity.getBody();
+        ChannelSearch res = entity.getBody();
+        assert res != null;
+        res.getItems().forEach(channel -> channel.setVideos(getVideos(token, "snippet", channel.getId(), "25").getItems()));
+        return res;
     }
 
-    public VideoSnippetSearch getVideos(String token, String part, String playListId, String maxResults) {
-        String uri = String.format("https://youtube.googleapis.com/youtube/v3/playlistItems?key=%s&part=%s&playlistId=%s&maxResults=%s", token, part.replace("%2C", ","), playListId, maxResults);
+    public VideoSnippetSearch getVideos(String token, String part, String channelId, String maxResults) {
+        String uri = String.format("https://youtube.googleapis.com/youtube/v3/search?part=%s&maxResults=%s&q=fun&type=video&key=%s&channelId=%s", part.replace("%2C", ","), maxResults,token, channelId);
         ResponseEntity<VideoSnippetSearch> entity = restTemplate.exchange(uri, HttpMethod.GET,null, VideoSnippetSearch.class);
         return entity.getBody();
     }

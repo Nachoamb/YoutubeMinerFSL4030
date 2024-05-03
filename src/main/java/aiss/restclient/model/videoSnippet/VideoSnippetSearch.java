@@ -37,15 +37,12 @@ public class VideoSnippetSearch {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(VideoSnippetSearch.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("nextPageToken");
+        sb.append("\n   nextPageToken");
         sb.append('=');
         sb.append(((this.nextPageToken == null)?"<null>":this.nextPageToken));
-        sb.append(',');
-        sb.append("items");
+        sb.append("\n   items");
         sb.append('=');
         sb.append(((this.items == null)?"<null>":this.items));
-        sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
         } else {

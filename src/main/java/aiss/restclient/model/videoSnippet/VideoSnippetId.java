@@ -22,9 +22,6 @@ public class VideoSnippetId {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(VideoSnippetId.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("videoId");
-        sb.append('=');
         sb.append(((this.videoId == null)?"<null>":this.videoId));
         sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
