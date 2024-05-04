@@ -33,12 +33,10 @@ public class Caption {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(Caption.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("id");
+        sb.append("\n               id");
         sb.append('=');
         sb.append(((this.id == null)?"<null>":this.id));
-        sb.append(',');
-        sb.append("snippet");
+        sb.append("\n               snippet");
         sb.append('=');
         sb.append(((this.snippet == null)?"<null>":this.snippet));
         sb.append(',');

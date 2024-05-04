@@ -84,24 +84,19 @@ public class CommentSnippet__1 {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(CommentSnippet__1.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("textOriginal");
+        sb.append("\n                           textOriginal");
         sb.append('=');
         sb.append(((this.textOriginal == null)?"<null>":this.textOriginal));
-        sb.append(',');
-        sb.append("authorDisplayName");
+        sb.append("\n                           authorDisplayName");
         sb.append('=');
         sb.append(((this.authorDisplayName == null)?"<null>":this.authorDisplayName));
-        sb.append(',');
-        sb.append("authorProfileImageUrl");
+        sb.append("\n                           authorProfileImageUrl");
         sb.append('=');
         sb.append(((this.authorProfileImageUrl == null)?"<null>":this.authorProfileImageUrl));
-        sb.append(',');
-        sb.append("authorChannelUrl");
+        sb.append("\n                           authorChannelUrl");
         sb.append('=');
         sb.append(((this.authorChannelUrl == null)?"<null>":this.authorChannelUrl));
-        sb.append(',');
-        sb.append("authorChannelId");
+        sb.append("\n                           authorChannelId");
         sb.append('=');
         sb.append(((this.authorChannelId == null)?"<null>":this.authorChannelId));
         sb.append(',');

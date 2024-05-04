@@ -47,6 +47,7 @@ public class ChannelSnippet {
     @Override
     public String toString() {
         return "ChannelSnippet [title=" + title + ", description=" + description + ", publishedAt=" + publishedAt + "]";
+
     }
 
     // @Override

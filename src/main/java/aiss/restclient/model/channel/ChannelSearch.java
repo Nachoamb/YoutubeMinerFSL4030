@@ -24,6 +24,7 @@ public class ChannelSearch {
     @Override
     public String toString() {
         return "ChannelSearch [items=" + items + "]";
+
     }
 
     // @Override
