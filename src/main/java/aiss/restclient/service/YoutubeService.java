@@ -19,11 +19,6 @@ public class YoutubeService {
     //@Autowired
     RestTemplate restTemplate = new RestTemplate();
 
-    public HttpEntity<Channel> auth (String token){
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("key", token);
-        return new HttpEntity<>(null, headers);
-    }
     public ChannelSearch getChannelWithId(String token,String part, String id) {
         String uri = String.format("https://www.googleapis.com/youtube/v3/channels?key=%s&part=%s&id=%s",token,part,id);
         ResponseEntity<ChannelSearch> entity = restTemplate.getForEntity(uri, ChannelSearch.class);
