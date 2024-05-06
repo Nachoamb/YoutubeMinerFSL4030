@@ -1,4 +1,4 @@
-package aiss.restclient.model.caption;
+package aiss.restclient.model.Youtube.caption;
 
 import com.fasterxml.jackson.annotation.*;
 

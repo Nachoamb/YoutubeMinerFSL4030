@@ -6,7 +6,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import aiss.restclient.model.channel.ChannelSearch;
+
+import aiss.restclient.model.Youtube.channel.ChannelSearch;
 import aiss.restclient.service.ChannelSearchService;
 
 public class ChannelSearchServiceTest {

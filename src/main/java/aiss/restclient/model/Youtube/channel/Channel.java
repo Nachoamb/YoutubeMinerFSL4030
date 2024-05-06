@@ -1,8 +1,9 @@
 
-package aiss.restclient.model.channel;
+package aiss.restclient.model.Youtube.channel;
 
-import aiss.restclient.model.videoSnippet.VideoSnippet;
 import com.fasterxml.jackson.annotation.*;
+
+import aiss.restclient.model.Youtube.videoSnippet.VideoSnippet;
 
 import java.util.ArrayList;
 import java.util.List;

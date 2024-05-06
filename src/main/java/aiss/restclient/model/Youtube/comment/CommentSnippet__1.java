@@ -1,5 +1,5 @@
 
-package aiss.restclient.model.comment;
+package aiss.restclient.model.Youtube.comment;
 
 import com.fasterxml.jackson.annotation.*;
 

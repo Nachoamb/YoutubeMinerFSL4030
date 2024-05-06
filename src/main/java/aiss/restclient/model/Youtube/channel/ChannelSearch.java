@@ -1,5 +1,5 @@
 
-package aiss.restclient.model.channel;
+package aiss.restclient.model.Youtube.channel;
 
 import java.util.List;
 

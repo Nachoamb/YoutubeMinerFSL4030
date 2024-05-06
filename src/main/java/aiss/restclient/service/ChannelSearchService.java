@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import aiss.restclient.model.channel.ChannelSearch;
+import aiss.restclient.model.Youtube.channel.ChannelSearch;
 
 @Service
 public class ChannelSearchService {
