@@ -1,10 +1,11 @@
 
-package aiss.restclient.model.videoSnippet;
+package aiss.restclient.model.Youtube.videoSnippet;
 
 
-import aiss.restclient.model.caption.Caption;
-import aiss.restclient.model.comment.Comment;
 import com.fasterxml.jackson.annotation.*;
+
+import aiss.restclient.model.Youtube.caption.Caption;
+import aiss.restclient.model.Youtube.comment.Comment;
 
 import java.util.ArrayList;
 import java.util.List;

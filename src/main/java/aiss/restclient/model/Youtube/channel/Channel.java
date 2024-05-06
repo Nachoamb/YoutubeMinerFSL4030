@@ -1,8 +1,9 @@
 
-package aiss.restclient.model.channel;
+package aiss.restclient.model.Youtube.channel;
 
-import aiss.restclient.model.videoSnippet.VideoSnippet;
 import com.fasterxml.jackson.annotation.*;
+
+import aiss.restclient.model.Youtube.videoSnippet.VideoSnippet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,22 +54,29 @@ public class Channel {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("\n   id");
-        sb.append('=');
-        sb.append(((this.id == null)?"<null>":this.id));
-        sb.append("\n   snippet");
-        sb.append('=');
-        sb.append(((this.snippet == null)?"<null>":this.snippet));
-        sb.append("\n   videos");
-        sb.append('=');
-        sb.append(((this.videos == null)?"<null>":this.videos));
-        if (sb.charAt((sb.length()- 1)) == ',') {
-            sb.setCharAt((sb.length()- 1), ']');
-        } else {
-            sb.append(']');
-        }
-        return sb.toString();
+        return "Channel [id=" + id + ", snippet=" + snippet + ", videos=" + videos + "]";
     }
+
+    // @Override
+    // public String toString() {
+    //     StringBuilder sb = new StringBuilder();
+    //     sb.append(Channel.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+    //     sb.append("id");
+    //     sb.append('=');
+    //     sb.append(((this.id == null)?"<null>":this.id));
+    //     sb.append(',');
+    //     sb.append("snippet");
+    //     sb.append('=');
+    //     sb.append(((this.snippet == null)?"<null>":this.snippet));
+    //     sb.append(',');
+    //     if (sb.charAt((sb.length()- 1)) == ',') {
+    //         sb.setCharAt((sb.length()- 1), ']');
+    //     } else {
+    //         sb.append(']');
+    //     }
+    //     return sb.toString();
+    // }
+
+        
 
 }

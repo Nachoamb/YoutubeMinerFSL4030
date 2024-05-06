@@ -1,17 +1,17 @@
 
-package aiss.restclient.model.videoSnippet;
-
-import java.util.List;
+package aiss.restclient.model.Youtube.comment;
 
 import com.fasterxml.jackson.annotation.*;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class VideoSnippetSearch {
+public class CommentSearch {
 
     @JsonProperty("nextPageToken")
     private String nextPageToken;
     @JsonProperty("items")
-    private List<VideoSnippet> items;
+    private List<Comment> items;
 
     @JsonProperty("nextPageToken")
     public String getNextPageToken() {
@@ -24,12 +24,12 @@ public class VideoSnippetSearch {
     }
 
     @JsonProperty("items")
-    public List<VideoSnippet> getItems() {
+    public List<Comment> getItems() {
         return items;
     }
 
     @JsonProperty("items")
-    public void setItems(List<VideoSnippet> items) {
+    public void setItems(List<Comment> items) {
         this.items = items;
     }
 
@@ -37,12 +37,13 @@ public class VideoSnippetSearch {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\n   nextPageToken");
+        sb.append("\n           nextPageToken");
         sb.append('=');
         sb.append(((this.nextPageToken == null)?"<null>":this.nextPageToken));
-        sb.append("\n   items");
+        sb.append("\n           items");
         sb.append('=');
         sb.append(((this.items == null)?"<null>":this.items));
+        sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
         } else {

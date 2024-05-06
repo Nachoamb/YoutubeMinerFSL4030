@@ -1,20 +1,21 @@
 package aiss.restclient.service;
 
-import aiss.restclient.model.caption.CaptionSearch;
-import aiss.restclient.model.channel.ChannelSearch;
-import aiss.restclient.model.comment.CommentSearch;
-import aiss.restclient.model.videoSnippet.VideoSnippetSearch;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import aiss.restclient.model.Youtube.caption.CaptionSearch;
+import aiss.restclient.model.Youtube.channel.ChannelSearch;
+import aiss.restclient.model.Youtube.comment.CommentSearch;
+import aiss.restclient.model.Youtube.videoSnippet.VideoSnippetSearch;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class YoutubeServiceTest {
-    @Autowired
-    YoutubeService service;
+    
+    // @Autowired
+    YoutubeService service = new YoutubeService();
 
     @Test
     @DisplayName("Get channels with id")
@@ -59,5 +60,11 @@ class YoutubeServiceTest {
         CommentSearch comment = service.getComments(token,part,playListId,"3");
         assertNotNull(comment,"The comment is null");
         System.out.println(comment);
+    }
+
+    public static void main(String[] args) {
+        YoutubeServiceTest y = new YoutubeServiceTest();
+        y.getChannelsWithId();
+
     }
 }

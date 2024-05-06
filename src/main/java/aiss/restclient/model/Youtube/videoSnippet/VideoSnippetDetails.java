@@ -1,18 +1,27 @@
 
-package aiss.restclient.model.channel;
-
+package aiss.restclient.model.Youtube.videoSnippet;
 
 import com.fasterxml.jackson.annotation.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ChannelSnippet {
+public class VideoSnippetDetails {
 
+    @JsonProperty("publishedAt")
+    private String publishedAt;
     @JsonProperty("title")
     private String title;
     @JsonProperty("description")
     private String description;
+
     @JsonProperty("publishedAt")
-    private String publishedAt;
+    public String getPublishedAt() {
+        return publishedAt;
+    }
+
+    @JsonProperty("publishedAt")
+    public void setPublishedAt(String publishedAt) {
+        this.publishedAt = publishedAt;
+    }
 
     @JsonProperty("title")
     public String getTitle() {
@@ -34,29 +43,18 @@ public class ChannelSnippet {
         this.description = description;
     }
 
-    @JsonProperty("publishedAt")
-    public String getPublishedAt() {
-        return publishedAt;
-    }
-
-    @JsonProperty("publishedAt")
-    public void setPublishedAt(String publishedAt) {
-        this.publishedAt = publishedAt;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("\n           publishedAt");
+        sb.append('=');
+        sb.append(((this.publishedAt == null)?"<null>":this.publishedAt));
         sb.append("\n           title");
         sb.append('=');
         sb.append(((this.title == null)?"<null>":this.title));
         sb.append("\n           description");
         sb.append('=');
         sb.append(((this.description == null)?"<null>":this.description));
-        sb.append("\n           publishedAt");
-        sb.append('=');
-        sb.append(((this.publishedAt == null)?"<null>":this.publishedAt));
-        sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
         } else {

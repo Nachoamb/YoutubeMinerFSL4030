@@ -1,11 +1,5 @@
 package aiss.restclient.service;
 
-import aiss.restclient.model.caption.CaptionSearch;
-import aiss.restclient.model.channel.Channel;
-import aiss.restclient.model.channel.ChannelSearch;
-import aiss.restclient.model.comment.CommentSearch;
-import aiss.restclient.model.videoSnippet.VideoSnippetSearch;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -13,12 +7,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
+import aiss.restclient.model.Youtube.caption.CaptionSearch;
+import aiss.restclient.model.Youtube.channel.Channel;
+import aiss.restclient.model.Youtube.channel.ChannelSearch;
+import aiss.restclient.model.Youtube.comment.CommentSearch;
+import aiss.restclient.model.Youtube.videoSnippet.VideoSnippetSearch;
 
 @Service
 public class YoutubeService {
-    @Autowired
-    RestTemplate restTemplate;
+    
+    //@Autowired
+    RestTemplate restTemplate = new RestTemplate();
 
     public HttpEntity<Channel> auth (String token){
         HttpHeaders headers = new HttpHeaders();
