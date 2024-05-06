@@ -1,5 +1,6 @@
 package aiss.restclient.service;
 
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -18,7 +19,7 @@ public class YoutubeService {
     
     //@Autowired
     RestTemplate restTemplate = new RestTemplate();
-
+  
     public ChannelSearch getChannelWithId(String token,String part, String id) {
         String uri = String.format("https://www.googleapis.com/youtube/v3/channels?key=%s&part=%s&id=%s",token,part,id);
         ResponseEntity<ChannelSearch> entity = restTemplate.getForEntity(uri, ChannelSearch.class);
