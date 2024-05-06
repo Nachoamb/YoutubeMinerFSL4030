@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import aiss.restclient.model.Youtube.channel.Channel;
 import aiss.restclient.model.Youtube.channel.ChannelSearch;
 import aiss.restclient.service.YoutubeService;
+import ProyectoIntegracionAISS.src.main.java.aiss.restclient.model.Channel;
 
 @Controller
 @RequestMapping("/api/")
@@ -22,8 +23,11 @@ public class YoutubeController {
     public Channel post(@PathVariable String id) {
         String token = "1a91f47a52a63df97b35f0694c7bf4cb";
         String part = "snippet,contentDetails,statistics";
-        ChannelSearch channel = youtubeService.getChannelWithId(token, part, id);
-        return new Channel(channel.getName(), channel.getDescription(), channel.getCreatedTime(), new ArrayList<>());
+        ChannelSearch channelSearch = youtubeService.getChannelWithId(token, part, id);
+        for (Channel channel: channelSearch.getItems()) {
+            return new Channel(channel.getName(), channel.getDescription(), channel.getCreatedTime(), new ArrayList<>());
+        }
+        
     }
 
 }
