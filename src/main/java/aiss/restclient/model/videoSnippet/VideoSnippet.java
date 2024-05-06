@@ -1,11 +1,11 @@
 
-package aiss.restclient.model.Youtube.videoSnippet;
+package aiss.restclient.model.videoSnippet;
 
 
 import com.fasterxml.jackson.annotation.*;
 
-import aiss.restclient.model.Youtube.caption.Caption;
-import aiss.restclient.model.Youtube.comment.Comment;
+import aiss.restclient.model.caption.YoutubeCaption;
+import aiss.restclient.model.comment.YoutubeComment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +20,10 @@ public class VideoSnippet {
 
     // These attributes have been manually added
     @JsonProperty("comments")
-    private List<Comment> comments;
+    private List<YoutubeComment> comments;
 
     @JsonProperty("captions")
-    private List<Caption> captions;
+    private List<YoutubeCaption> captions;
 
     public VideoSnippet() {
         this.comments = new ArrayList<>();
@@ -31,20 +31,20 @@ public class VideoSnippet {
     }
 
     @JsonProperty("comments")
-    public List<Comment> getComments() {
+    public List<YoutubeComment> getComments() {
         return comments;
     }
 
     @JsonProperty("comments")
-    public void setComments(List<Comment> comments) {
+    public void setComments(List<YoutubeComment> comments) {
         this.comments = comments;
     }
 
     @JsonProperty("captions")
-    public List<Caption> getCaptions() { return captions; }
+    public List<YoutubeCaption> getCaptions() { return captions; }
 
     @JsonProperty("captions")
-    public void setCaptions(List<Caption> captions) {
+    public void setCaptions(List<YoutubeCaption> captions) {
         this.captions = captions;
     }
 

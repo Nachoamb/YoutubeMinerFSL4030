@@ -1,15 +1,14 @@
 
-package aiss.restclient.model.Youtube.channel;
+package aiss.restclient.model.channel;
 
+import aiss.restclient.model.videoSnippet.VideoSnippet;
 import com.fasterxml.jackson.annotation.*;
-
-import aiss.restclient.model.Youtube.videoSnippet.VideoSnippet;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Channel {
+public class YoutubeChannel {
 
     @JsonProperty("id")
     private String id;
@@ -20,7 +19,7 @@ public class Channel {
     @JsonProperty("videos")
     private List<VideoSnippet> videos;
 
-    public Channel() {
+    public YoutubeChannel() {
         videos = new ArrayList<>();
     }
 

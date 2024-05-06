@@ -4,10 +4,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import aiss.restclient.model.Youtube.caption.CaptionSearch;
-import aiss.restclient.model.Youtube.channel.ChannelSearch;
-import aiss.restclient.model.Youtube.comment.CommentSearch;
-import aiss.restclient.model.Youtube.videoSnippet.VideoSnippetSearch;
+import aiss.restclient.model.caption.CaptionSearch;
+import aiss.restclient.model.channel.ChannelSearch;
+import aiss.restclient.model.comment.CommentSearch;
+import aiss.restclient.model.videoSnippet.VideoSnippetSearch;
 
 import static org.junit.jupiter.api.Assertions.*;
 

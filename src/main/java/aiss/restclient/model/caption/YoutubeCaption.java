@@ -1,28 +1,41 @@
-
-package aiss.restclient.model.Youtube.comment;
+package aiss.restclient.model.caption;
 
 import com.fasterxml.jackson.annotation.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Comment {
+public class YoutubeCaption {
+
+    @JsonProperty("id")
+    private String id;
+    @JsonProperty("snippet")
+    private CaptionSnippet snippet;
+
+    @JsonProperty("id")
+    public String getId() {
+        return id;
+    }
+
+    @JsonProperty("id")
+    public void setId(String id) {
+        this.id = id;
+    }
 
     @JsonProperty("snippet")
-    private CommentSnippet snippet;
-
-    @JsonProperty("snippet")
-    public CommentSnippet getCommentSnippet() {
+    public CaptionSnippet getSnippet() {
         return snippet;
     }
 
     @JsonProperty("snippet")
-    public void setCommentSnippet(CommentSnippet snippet) {
+    public void setSnippet(CaptionSnippet snippet) {
         this.snippet = snippet;
     }
-
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("\n               id");
+        sb.append('=');
+        sb.append(((this.id == null)?"<null>":this.id));
         sb.append("\n               snippet");
         sb.append('=');
         sb.append(((this.snippet == null)?"<null>":this.snippet));

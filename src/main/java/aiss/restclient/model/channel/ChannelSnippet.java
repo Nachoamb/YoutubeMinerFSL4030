@@ -1,5 +1,5 @@
 
-package aiss.restclient.model.Youtube.channel;
+package aiss.restclient.model.channel;
 
 
 import com.fasterxml.jackson.annotation.*;

@@ -1,5 +1,5 @@
 
-package aiss.restclient.model.Youtube.videoSnippet;
+package aiss.restclient.model.videoSnippet;
 
 import com.fasterxml.jackson.annotation.*;
 

@@ -1,14 +1,16 @@
-package aiss.restclient.model.Youtube.caption;
+
+package aiss.restclient.model.comment;
+
 
 import com.fasterxml.jackson.annotation.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Caption {
+public class TopLevelComment {
 
     @JsonProperty("id")
     private String id;
     @JsonProperty("snippet")
-    private CaptionSnippet snippet;
+    private CommentSnippet__1 snippet;
 
     @JsonProperty("id")
     public String getId() {
@@ -21,22 +23,22 @@ public class Caption {
     }
 
     @JsonProperty("snippet")
-    public CaptionSnippet getSnippet() {
+    public CommentSnippet__1 getSnippet() {
         return snippet;
     }
 
     @JsonProperty("snippet")
-    public void setSnippet(CaptionSnippet snippet) {
+    public void setSnippet(CommentSnippet__1 snippet) {
         this.snippet = snippet;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\n               id");
+        sb.append("\n                       id");
         sb.append('=');
         sb.append(((this.id == null)?"<null>":this.id));
-        sb.append("\n               snippet");
+        sb.append("\n                       snippet");
         sb.append('=');
         sb.append(((this.snippet == null)?"<null>":this.snippet));
         sb.append(',');
