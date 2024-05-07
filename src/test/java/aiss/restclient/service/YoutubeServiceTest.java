@@ -2,6 +2,8 @@ package aiss.restclient.service;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import aiss.restclient.model.caption.CaptionSearch;
@@ -14,8 +16,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class YoutubeServiceTest {
     
-    // @Autowired
-    YoutubeService service = new YoutubeService();
+    @Autowired
+    YoutubeService service;
 
     @Test
     @DisplayName("Get channels with id")
