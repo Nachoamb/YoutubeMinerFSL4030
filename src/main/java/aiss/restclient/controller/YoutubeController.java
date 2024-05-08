@@ -7,11 +7,9 @@ import aiss.restclient.model.comment.AuthorChannelId;
 import aiss.restclient.model.comment.CommentSnippet;
 import aiss.restclient.model.comment.CommentSnippet__1;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import aiss.restclient.model.VideoMiner.*;
 import aiss.restclient.model.channel.YoutubeChannel;
@@ -36,6 +34,7 @@ public class YoutubeController {
         return youtubeService.getChannelWithId(token, part, id);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/channels/{id}")
     public List<Channel> post(@PathVariable String id) {
         String token = "AIzaSyBMFf0FXcHTGGud3hXJeFKD6bEksvPNcMw";
